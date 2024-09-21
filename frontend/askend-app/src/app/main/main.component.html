@@ -1,0 +1,41 @@
+<form class="container mt-5 mb-5">
+  <button type="submit" class="btn btn-primary" (click)="openAddingModal()" [disabled]="">Add new filter</button>
+</form>
+
+<div class="container">
+        <mat-accordion>
+            <ng-container *ngFor="let filter of filters">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> {{filter.name}} </mat-panel-title>
+                        <mat-panel-description> Click here to see all criterias </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Criteria type</th>
+                            <th scope="col">Criteria condition</th>
+                            <th scope="col">Value</th>
+                            <th scope="col">Selected</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let criteria of filter.criterias">
+                                    <tr>
+                                        <td>{{criteria.id}}</td>
+                                        <td>{{criteria.criteriaType.classifierValue.value}}</td>
+                                        <td>{{criteria.condition.classifierValue.value}}</td>
+                                        <td>{{criteria.value}}</td>
+                                        <td [style.color]="criteria.isSelected ? 'green' : 'red'">
+                                            {{ criteria.isSelected ? 'TRUE' : 'FALSE' }}
+                                        </td>
+
+                                    </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+</div>

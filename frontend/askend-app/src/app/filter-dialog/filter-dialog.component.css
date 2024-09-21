@@ -1,0 +1,54 @@
+.adjustable-modal {
+    display: flex;
+    flex-direction: column;
+    resize: vertical;
+    overflow: auto;
+    max-height: 70vh;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+.dialog-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.dialog-actions {
+    justify-content: space-between;
+    background-color: rgb(245 238 238 / 87%);
+    padding: 20px 24px;
+}
+
+.save-button {
+    color: #00c704 !important;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize text */
+    font-size: 16px; /* Increase font size */
+}
+
+.save-button:hover {
+    background-color: #24da29;
+    color: white !important;
+}
+
+.save-button .mat-button-wrapper {
+    font-size: inherit; /* Inherit font size */
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure even distribution */
+    gap: 5px; /* Adjust spacing between radio buttons */
+}
+
+.radio-button {
+    flex: 1 0 21%; /* Ensure each button takes up roughly equal space */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 5px; /* Add some space below each button for better readability */
+}
+
+

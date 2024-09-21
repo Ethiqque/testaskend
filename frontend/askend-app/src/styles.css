@@ -1,0 +1,33 @@
+html, body, app-root {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    overflow: hidden;
+}
+
+.required::after {
+    content: ' *';
+    color: red;
+}
+
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+app-header, app-footer {
+    flex: 0 0 auto;
+}
+
+.router-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
